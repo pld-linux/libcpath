@@ -2,7 +2,7 @@ Summary:	Library to support cross-platform C path functions
 Summary(pl.UTF-8):	Biblioteka wspierająca wieloplatformowe funkcje obsługi ścieżek w C
 Name:		libcpath
 Version:	20150101
-Release:	1
+Release:	2
 License:	LGPL v3+
 Group:		Libraries
 Source0:	https://github.com/libyal/libcpath/archive/%{version}/%{name}-%{version}.tar.gz
