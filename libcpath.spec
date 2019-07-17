@@ -1,30 +1,35 @@
+# m4/libcerror.m4
+%define		libcerror_ver	20120425
+# m4/libclocale.m4
+%define		libclocale_ver	20120425
+# m4/libcsplit.m4
+%define		libcsplit_ver	20120701
+# m4/libuna.m4
+%define		libuna_ver	20181006
 Summary:	Library to support cross-platform C path functions
 Summary(pl.UTF-8):	Biblioteka wspierająca wieloplatformowe funkcje obsługi ścieżek w C
 Name:		libcpath
-Version:	20150101
-Release:	2
+Version:	20181228
+Release:	1
 License:	LGPL v3+
 Group:		Libraries
-Source0:	https://github.com/libyal/libcpath/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	3f2d6b40bf36cea61aec4f31a8ac82e2
-Patch0:		%{name}-system-libs.patch
+#Source0Download: https://github.com/libyal/libcpath/releases
+Source0:	https://github.com/libyal/libcpath/releases/download/%{version}/%{name}-alpha-%{version}.tar.gz
+# Source0-md5:	d563024f33429cb1486ddebd4530703a
 URL:		https://github.com/libyal/libcpath/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1.6
 BuildRequires:	gettext-tools >= 0.18.1
-BuildRequires:	libcerror-devel >= 20120425
-BuildRequires:	libclocale-devel >= 20120425
-BuildRequires:	libcsplit-devel >= 20120701
-BuildRequires:	libcstring-devel >= 20120425
-BuildRequires:	libuna-devel >= 20120425
+BuildRequires:	libcerror-devel >= %{libcerror_ver}
+BuildRequires:	libclocale-devel >= %{libclocale_ver}
+BuildRequires:	libcsplit-devel >= %{libcsplit_ver}
+BuildRequires:	libuna-devel >= %{libuna_ver}
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	sed >= 4.0
-Requires:	libcerror >= 20120425
-Requires:	libclocale >= 20120425
-Requires:	libcsplit >= 20120701
-Requires:	libcstring >= 20120425
-Requires:	libuna >= 20120425
+Requires:	libcerror >= %{libcerror_ver}
+Requires:	libclocale >= %{libclocale_ver}
+Requires:	libcsplit >= %{libcsplit_ver}
+Requires:	libuna >= %{libuna_ver}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,11 +44,10 @@ Summary:	Header files for libcpath library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libcpath
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libcerror-devel >= 20120425
-Requires:	libclocale-devel >= 20120425
-Requires:	libcsplit-devel >= 20120701
-Requires:	libcstring-devel >= 20120425
-Requires:	libuna-devel >= 20120425
+Requires:	libcerror-devel >= %{libcerror_ver}
+Requires:	libclocale-devel >= %{libclocale_ver}
+Requires:	libcsplit-devel >= %{libcsplit_ver}
+Requires:	libuna-devel >= %{libuna_ver}
 
 %description devel
 Header files for libcpath library.
@@ -65,11 +69,9 @@ Statyczna biblioteka libcpath.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__gettextize}
-%{__sed} -i -e 's/ po\/Makefile.in//' configure.ac
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
