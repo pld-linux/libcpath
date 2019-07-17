@@ -1,10 +1,7 @@
-# m4/libcerror.m4
+# see m4/${libname}.m4 />= for required version of particular library
 %define		libcerror_ver	20120425
-# m4/libclocale.m4
 %define		libclocale_ver	20120425
-# m4/libcsplit.m4
 %define		libcsplit_ver	20120701
-# m4/libuna.m4
 %define		libuna_ver	20181006
 Summary:	Library to support cross-platform C path functions
 Summary(pl.UTF-8):	Biblioteka wspierająca wieloplatformowe funkcje obsługi ścieżek w C
