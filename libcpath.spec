@@ -2,17 +2,17 @@
 %define		libcerror_ver	20120425
 %define		libclocale_ver	20120425
 %define		libcsplit_ver	20120701
-%define		libuna_ver	20181006
+%define		libuna_ver	20210801
 Summary:	Library to support cross-platform C path functions
 Summary(pl.UTF-8):	Biblioteka wspierająca wieloplatformowe funkcje obsługi ścieżek w C
 Name:		libcpath
-Version:	20181228
+Version:	20220108
 Release:	1
 License:	LGPL v3+
 Group:		Libraries
 #Source0Download: https://github.com/libyal/libcpath/releases
 Source0:	https://github.com/libyal/libcpath/releases/download/%{version}/%{name}-alpha-%{version}.tar.gz
-# Source0-md5:	d563024f33429cb1486ddebd4530703a
+# Source0-md5:	065da0836efe86cbd1376073e3b1da25
 URL:		https://github.com/libyal/libcpath/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1.6
