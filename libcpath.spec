@@ -6,13 +6,13 @@
 Summary:	Library to support cross-platform C path functions
 Summary(pl.UTF-8):	Biblioteka wspierająca wieloplatformowe funkcje obsługi ścieżek w C
 Name:		libcpath
-Version:	20240414
+Version:	20251224
 Release:	1
 License:	LGPL v3+
 Group:		Libraries
 #Source0Download: https://github.com/libyal/libcpath/releases
 Source0:	https://github.com/libyal/libcpath/releases/download/%{version}/%{name}-alpha-%{version}.tar.gz
-# Source0-md5:	5e2f1641504802425968b5d2e894a19d
+# Source0-md5:	76da48ccbaffa555e69817150b2a2e09
 URL:		https://github.com/libyal/libcpath/
 BuildRequires:	autoconf >= 2.71
 BuildRequires:	automake >= 1.6
@@ -95,12 +95,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-%attr(755,root,root) %{_libdir}/libcpath.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libcpath.so.1
+%{_libdir}/libcpath.so.*.*.*
+%ghost %{_libdir}/libcpath.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libcpath.so
+%{_libdir}/libcpath.so
 %{_includedir}/libcpath
 %{_includedir}/libcpath.h
 %{_pkgconfigdir}/libcpath.pc
